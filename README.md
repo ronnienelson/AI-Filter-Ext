@@ -32,4 +32,4 @@ Enhanced by using your openaiKey, but not necessary
 1. **Clone** this repo:
    ```bash
    git clone https://github.com/ronnienelson/ai-filter-ext.git
-   cd ai-aware-search-filter
+
