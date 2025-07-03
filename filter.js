@@ -1,9 +1,3 @@
-// filter.js
-
-// ─── CONFIG ────────────────────────────────────────────────────────────────
-// ─── CONFIG ────────────────────────────────────────────────────────────────
-// filter.js
-
 // ─── CONFIG ────────────────────────────────────────────────────────────────
 const DEFAULT_KEYWORDS = [
   "powered by ai",
@@ -14,7 +8,7 @@ const DEFAULT_KEYWORDS = [
   "ai-enabled",
   "ai as a service"
 ];
-// …the rest stays exactly the same…
+
 
 // result‐block selectors (order matters—newest Google ones first):
 // filter.js (top)
@@ -31,10 +25,7 @@ const RESULT_SELECTORS = [
   "article[id^='t3_']",
     "shreddit-post[id^='t3_']",
       "shreddit-post[id^='t3_']",
-
-  // New Reddit Search UI posts:
   "search-telemetry-tracker[data-testid='search-sdui-post']",
-  // (or as a fallback)
   "search-telemetry-tracker[data-thingid^='t3_']",
 ];
 
