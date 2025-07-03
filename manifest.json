@@ -1,0 +1,46 @@
+{
+  "name": "AI-Aware Search Filter",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Hides search results that market themselves as AI.",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.google.com/*",
+    "https://www.bing.com/*",
+    "https://duckduckgo.com/*",
+    "https://*.reddit.com/*",
+    "https://reddit.com/*",
+    "https://*.pinterest.com/*",
+    "https://pinterest.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.google.com/*",
+        "https://www.bing.com/*",
+        "https://duckduckgo.com/*",
+        "https://*.reddit.com/*",
+        "https://reddit.com/*",
+        "https://*.pinterest.com/*",
+        "https://pinterest.com/*"
+      ],
+      "js": ["filter.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html"
+}
